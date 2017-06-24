@@ -1,2 +1,8 @@
 # DS502-AI-Engineer
 DS502-AI工程师直通车课程项目，包含每一期课程学习和实践资料，同学们可以在issue中发布自己的疑问，互相交流。
+
+## FAQ
+请前往查看Issues
+
+## Copyright
+该项目所有权属于BitTiger所有，请勿随意转载或修改文件内容。
