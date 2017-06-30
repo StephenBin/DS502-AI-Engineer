@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.83">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #008f51; -webkit-text-stroke: #008f51}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 16.0px Courier; color: #b51a00; -webkit-text-stroke: #b51a00}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #9437ff; -webkit-text-stroke: #9437ff}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 13.0px Courier; color: #008f51; -webkit-text-stroke: #008f51}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #9337ff; -webkit-text-stroke: #9337ff}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 16.0px Courier; font-kerning: none; color: #b51a00; -webkit-text-stroke: 0px #000000}
+    span.s3 {font: 13.0px 'Hiragino Sans'; font-kerning: none; color: #3a88fe}
+    span.s4 {font: 13.0px 'PingFang SC'; font-kerning: none; color: #3a88fe}
+    span.s5 {font: 13.0px Courier; font-kerning: none; color: #3a88fe}
+    span.s6 {font-kerning: none; color: #008f50; -webkit-text-stroke: 0px #008f50}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">## Refer to http://caffe.berkeleyvision.org/installation.html</span></p>
+<p class="p1"><span class="s1"># Contributions simplifying and improving our build system are welcome!</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># cuDNN acceleration switch (uncomment to build with cuDNN).</span></p>
+<p class="p1"><span class="s1"># USE_CUDNN := 1</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># CPU-only switch (uncomment to build without GPU support).</span></p>
+<p class="p2"><span class="s1"><b>CPU_ONLY := 1</b></span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># uncomment to disable IO dependencies and corresponding data layers</span></p>
+<p class="p1"><span class="s1"># USE_OPENCV := 0</span></p>
+<p class="p1"><span class="s1"># USE_LEVELDB := 0</span></p>
+<p class="p1"><span class="s1"># USE_LMDB := 0</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># uncomment to allow MDB_NOLOCK when reading LMDB files (only if necessary)</span></p>
+<p class="p1"><span class="s1">#<span class="Apple-tab-span">	</span>You should not set this flag if you will be reading LMDBs with any</span></p>
+<p class="p1"><span class="s1">#<span class="Apple-tab-span">	</span>possibility of simultaneous read and write</span></p>
+<p class="p1"><span class="s1"># ALLOW_LMDB_NOLOCK := 1</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># Uncomment if you're using OpenCV 3</span></p>
+<p class="p1"><span class="s1"># OPENCV_VERSION := 3</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># To customize your choice of compiler, uncomment and set the following.</span></p>
+<p class="p1"><span class="s1"># N.B. the default for Linux is g++ and the default for OSX is clang++</span></p>
+<p class="p1"><span class="s1"># CUSTOM_CXX := g++</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># CUDA directory contains bin/ and lib/ directories that we need.</span></p>
+<p class="p4"><span class="s1">CUDA_DIR := /usr/local/cuda</span></p>
+<p class="p1"><span class="s1"># On Ubuntu 14.04, if cuda tools are installed via</span></p>
+<p class="p1"><span class="s1"># "sudo apt-get install nvidia-cuda-toolkit" then use this instead:</span></p>
+<p class="p1"><span class="s1"># CUDA_DIR := /usr</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># CUDA architecture setting: going with all of them.</span></p>
+<p class="p1"><span class="s1"># For CUDA &lt; 6.0, comment the *_50 through *_61 lines for compatibility.</span></p>
+<p class="p1"><span class="s1"># For CUDA &lt; 8.0, comment the *_60 and *_61 lines for compatibility.</span></p>
+<p class="p4"><span class="s1">CUDA_ARCH := -gencode arch=compute_20,code=sm_20 \</span></p>
+<p class="p4"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-gencode arch=compute_20,code=sm_21 \</span></p>
+<p class="p4"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-gencode arch=compute_30,code=sm_30 \</span></p>
+<p class="p4"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-gencode arch=compute_35,code=sm_35 \</span></p>
+<p class="p4"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-gencode arch=compute_50,code=sm_50 \</span></p>
+<p class="p4"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-gencode arch=compute_52,code=sm_52 \</span></p>
+<p class="p4"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-gencode arch=compute_60,code=sm_60 \</span></p>
+<p class="p4"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-gencode arch=compute_61,code=sm_61 \</span></p>
+<p class="p4"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-gencode arch=compute_61,code=compute_61</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># BLAS choice:</span></p>
+<p class="p1"><span class="s1"># atlas for ATLAS (default)</span></p>
+<p class="p1"><span class="s1"># mkl for MKL</span></p>
+<p class="p1"><span class="s1"># open for OpenBlas</span></p>
+<p class="p4"><span class="s1">BLAS := atlas</span></p>
+<p class="p1"><span class="s1"># Custom (MKL/ATLAS/OpenBLAS) include and lib directories.</span></p>
+<p class="p1"><span class="s1"># Leave commented to accept the defaults for your choice of BLAS</span></p>
+<p class="p1"><span class="s1"># (which should work)!</span></p>
+<p class="p1"><span class="s1"># BLAS_INCLUDE := /path/to/your/blas</span></p>
+<p class="p1"><span class="s1"># BLAS_LIB := /path/to/your/blas</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># Homebrew puts openblas in a directory that is not on the standard search path</span></p>
+<p class="p1"><span class="s1"># BLAS_INCLUDE := $(shell brew --prefix openblas)/include</span></p>
+<p class="p1"><span class="s1"># BLAS_LIB := $(shell brew --prefix openblas)/lib</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># This is required only if you will compile the matlab interface.</span></p>
+<p class="p1"><span class="s1"># MATLAB directory should contain the mex binary in /bin.</span></p>
+<p class="p1"><span class="s1"># MATLAB_DIR := /usr/local</span></p>
+<p class="p1"><span class="s1"># MATLAB_DIR := /Applications/MATLAB_R2012b.app</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># NOTE: this is required only if you will compile the python interface.</span></p>
+<p class="p1"><span class="s1"># We need to be able to find Python.h and numpy/arrayobject.h.</span></p>
+<p class="p5"><span class="s2"><b>#</b></span><span class="s1"> PYTHON_INCLUDE := /usr/include/python2.7 \</span></p>
+<p class="p5"><span class="s2"><b>#</b></span><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>/usr/lib/python2.7/dist-packages/numpy/core/include</span></p>
+<p class="p1"><span class="s1"># Anaconda Python distribution is quite popular. Include path:</span></p>
+<p class="p1"><span class="s1"># Verify anaconda location, sometimes it's in root.</span></p>
+<p class="p2"><span class="s1"><b>ANACONDA_HOME := $(HOME)/anaconda2 </b></span><span class="s3"><b>⬅︎ 注意：</b></span><span class="s4"><b>这里需要改为</b></span><span class="s5"><b>“ anaconda2 ”</b></span></p>
+<p class="p2"><span class="s1"><b>PYTHON_INCLUDE := $(ANACONDA_HOME)/include \</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">                  </span>$(ANACONDA_HOME)/include/python2.7 \</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">                  </span>$(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include</b></span></p>
+<p class="p6"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># Uncomment to use Python 3 (default is Python 2)</span></p>
+<p class="p1"><span class="s1"># PYTHON_LIBRARIES := boost_python3 python3.5m</span></p>
+<p class="p1"><span class="s1"># PYTHON_INCLUDE := /usr/include/python3.5m \</span></p>
+<p class="p1"><span class="s1"># <span class="Apple-converted-space">                </span>/usr/lib/python3.5/dist-packages/numpy/core/include</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># We need to be able to find libpythonX.X.so or .dylib.</span></p>
+<p class="p5"><span class="s2"><b>#</b></span><span class="s1"> PYTHON_LIB := /usr/lib</span></p>
+<p class="p2"><span class="s1"><b>PYTHON_LIB := $(ANACONDA_HOME)/lib</b></span></p>
+<p class="p6"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># Homebrew installs numpy in a non standard path (keg only)</span></p>
+<p class="p1"><span class="s1"># PYTHON_INCLUDE += $(dir $(shell python -c 'import numpy.core; </span><span class="s6">print(numpy.core.__file__)'))/include</span></p>
+<p class="p1"><span class="s1"># PYTHON_LIB += $(shell brew --prefix numpy)/lib</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># Uncomment to support layers written in Python (will link against Python libs)</span></p>
+<p class="p1"><span class="s1"># WITH_PYTHON_LAYER := 1</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># Whatever else you find you need goes here.</span></p>
+<p class="p4"><span class="s1">INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include</span></p>
+<p class="p4"><span class="s1">LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># If Homebrew is installed at a non standard location (for example your home directory) and you use it for general dependencies</span></p>
+<p class="p1"><span class="s1"># INCLUDE_DIRS += $(shell brew --prefix)/include</span></p>
+<p class="p1"><span class="s1"># LIBRARY_DIRS += $(shell brew --prefix)/lib</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># NCCL acceleration switch (uncomment to build with NCCL)</span></p>
+<p class="p1"><span class="s1"># https://github.com/NVIDIA/nccl (last tested version: v1.2.3-1+cuda8.0)</span></p>
+<p class="p1"><span class="s1"># USE_NCCL := 1</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># Uncomment to use `pkg-config` to specify OpenCV library paths.</span></p>
+<p class="p1"><span class="s1"># (Usually not necessary -- OpenCV libraries are normally installed in one of the above $LIBRARY_DIRS.)</span></p>
+<p class="p1"><span class="s1"># USE_PKG_CONFIG := 1</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># N.B. both build and distribute dirs are cleared on `make clean`</span></p>
+<p class="p4"><span class="s1">BUILD_DIR := build</span></p>
+<p class="p4"><span class="s1">DISTRIBUTE_DIR := distribute</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># Uncomment for debugging. Does not work on OSX due to https://github.com/BVLC/caffe/issues/171</span></p>
+<p class="p1"><span class="s1"># DEBUG := 1</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># The ID of the GPU that 'make runtest' will use to run unit tests.</span></p>
+<p class="p4"><span class="s1">TEST_GPUID := 0</span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"># enable pretty build (comment to see full commands)</span></p>
+<p class="p4"><span class="s1">Q ?= @</span></p>
+</body>
+</html>
