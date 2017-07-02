@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export TERM=xterm
+
 clear
 
 echo "======================================="
@@ -23,6 +25,3 @@ echo -e "step4:\n[NOTE]请确认已将 ~/caffe/build/CMakeCache.txt 文本中 \"
 open -a terminal `pwd`
 
 exit
-
-
-

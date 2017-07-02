@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export TERM=xterm
+
 clear
 
 echo "======================================="
