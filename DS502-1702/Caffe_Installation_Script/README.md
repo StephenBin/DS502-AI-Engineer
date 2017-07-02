@@ -95,6 +95,12 @@ README.md
 `bash3_InstallCaffe-C.sh`   运行到 `step3`，会提示将 `CMakeCache.txt` 文本中的 `CPU_ONLY` 的值由 `OFF` 改为 `ON`。
                             运行到 `step4`，会弹出新的 terminal 窗口，并提示在新终端中执行脚本 `bash4_InstallCaffe-D.sh`。
                             
+<<<<<<< HEAD
 `bash4_InstallCaffe-D.sh`   运行到 `step7`，会显示`caffe version` 。如成功编译、安装并测试成功，这里会显示 caffe 的版本号。例如：1.0.0。另外，还会弹出新的 terminal 窗口，并提示在新终端中执行脚本 `bash5_InstallCaffe-E.sh`。
 
 `bash5_InstallCaffe-E.sh`   运行到 `step8`，会显示`caffe version`。如环境变量设置正确，这里会显示 caffe 的版本号。例如：1.0.0。
+=======
+`bash4_InstallCaffe-D.sh`   运行到 `step6`，会显示`caffe version`。如成功编译、安装并测试成功，这里会显示 caffe 的版本号。例如：1.0.0。
+
+`bash5_InstallCaffe-E.sh`   运行到 `step5`，会显示`caffe version`。如环境变量设置正确，这里会显示 caffe 的版本号。例如：1.0.0。
+>>>>>>> 4a7d29b4b6a95f7fd065509f193f688f36d69ded
