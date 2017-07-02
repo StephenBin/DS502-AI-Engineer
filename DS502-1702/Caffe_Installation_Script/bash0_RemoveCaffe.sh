@@ -83,4 +83,3 @@ echo -e "step15:\n[NOTE]请确认已将 ～／.bash_profile 中 anaconda2 的环
 open -a terminal `pwd`
 
 exit
-

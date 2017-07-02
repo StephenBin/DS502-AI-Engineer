@@ -36,14 +36,9 @@ cd ~/caffe/python && echo " --> " && python -c "import caffe; print caffe.__vers
 
 echo "======================================="
 echo -e "step7:\n[NOTE]如成功编译、安装并测试成功，上面会显示 caffe 的版本号。例如：1.0.0。\n请在新窗口中继续执行脚本 bash5_InstallCaffe-E.sh"
-<<<<<<< HEAD
 
 open -a terminal `pwd`
-=======
->>>>>>> 4a7d29b4b6a95f7fd065509f193f688f36d69ded
 
 exit
-
-
 
 
