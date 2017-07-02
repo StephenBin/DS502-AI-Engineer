@@ -39,7 +39,7 @@ brew uninstall boost-python boost
 echo "======================================="
 echo "step7: "
 
-sudo sudo rm -r ~/python
+sudo rm -r ~/python
 
 echo "======================================="
 echo "step8: "
@@ -78,7 +78,7 @@ echo -e "\n# added the caffe python module directory to \$PYTHONPATH \nexport PY
 open -a TextEdit ~/.bash_profile
 
 echo "======================================="
-echo -e "step15:\n[NOTE]请确认已将 ～／.bash_profile 中 anaconda2 的环境变量删除并保存，\n完成后请在新窗口中继续执行脚本 bash1_InstallCaffe-A.sh"
+echo -e "step15:\n[NOTE]请确认已将 ～／.bash_profile 中 anaconda2 及 PYTHONPATH 的环境变量删除并保存，\n完成后请在新窗口中继续执行脚本 bash1_installAnaconda2-A.sh"
 
 open -a terminal `pwd`
 
