@@ -60,15 +60,15 @@ README.md
 
 `bash1_installAnaconda2_A.sh`：通过 Homebrew 下载相关 package，通过 curl 下载并安装 Anaconda2。
 
-`bash2_installAnaconda2_B`：通过 Anaconda2 下载相关 package。
+`bash2_installAnaconda2_B.sh`：通过 Anaconda2 下载相关 package。
 
-`bash3_installCaffe`：从 github 上 clone Caffe，并手动修改 Makefile.config 配置文件。
+`bash3_installCaffe.sh`：从 github 上 clone Caffe，并手动修改 Makefile.config 配置文件。
 
 `bash4_doCMake.sh`：执行 CMake 操作，生成 Makefile 文件，并手动修改 CMakeCache.txt 文件。
 
 `bash5_doMakePycaffe.sh`：执行 Make pycaffe 操作，对 python wrapper 进行编译。
 
-`bash6_setPYTHONPATH`：将 ~/caffe/python 路径下的 caffe 文件夹（caffe module） 复制到 ~/python 路径下，并设置好环境变量。
+`bash6_setPYTHONPATH.sh`：将 ~/caffe/python 路径下的 caffe 文件夹（caffe module） 复制到 ~/python 路径下，并设置好环境变量。
 
 `Makefile_config.html`：可作为配置 `Makefile.config` 文件的参考（ 适用于 Anaconda2 + 1 CPU without GPU 情况 ）。
 
@@ -89,7 +89,7 @@ README.md
 
 `bash1_installAnaconda2_A.sh`：耗时较长（ 大约需要 90 min ）
 
-`bash3_installCaffe`：耗时较长（ 大约需要 20 min ）
+`bash3_installCaffe.sh`：耗时较长（ 大约需要 20 min ）
 
 `bash5_doMakePycaffe_C.sh`：耗时较长 ( 大约需要 15 min)
 
@@ -103,7 +103,7 @@ README.md
                        
 `bash2_installAnaconda2-B.sh`：运行到 `step6`，会弹出新的 terminal 窗口，并提示在新终端中执行脚本 `bash3_installCaffe.sh`。
 
-`bash3_installCaffe`：运行到 `step5`，会提示修改配置文件 `Makefile.config`。
+`bash3_installCaffe.sh`：运行到 `step5`，会提示修改配置文件 `Makefile.config`。
 运行到 `step6`，会弹出新的 terminal 窗口，并提示在新终端中执行脚本 `bash4_doCMake.sh`。
 
 `bash4_doCMake.sh`：运行到 `step3`，会提示将 `CMakeCache.txt` 文本中的 `CPU_ONLY` 的值由 `OFF` 改为 `ON`。
