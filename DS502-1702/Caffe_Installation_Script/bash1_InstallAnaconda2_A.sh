@@ -4,6 +4,8 @@ export TERM=xterm
 
 clear
 
+sudo -S ./binary
+
 echo "======================================="
 echo "step1: "
 
@@ -42,12 +44,12 @@ brew install --build-from-source -vd boost boost-python
 echo "======================================="
 echo "step8: "
 
-cd ~/ && git clone https://github.com/BVLC/caffe.git
+brew install cmake
 
 echo "======================================="
 echo "step9: "
 
-brew install cmake
+sudo rm -r ~/anaconda2
 
 echo "======================================="
 echo "step10: "
@@ -65,7 +67,7 @@ echo "step12: "
 rm ~/Downloads/anaconda_installer.sh
 
 echo "======================================="
-echo -e "step13:\n[NOTE]请在新窗口中继续执行脚本 bash2_InstallCaffe-B.sh"
+echo -e "step13:\n[NOTE]请在新窗口中继续执行脚本 bash2_installAnaconda2-B.sh"
 
 open -a terminal `pwd`
 
