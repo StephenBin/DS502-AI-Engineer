@@ -38,9 +38,9 @@ Design/train a MLP in mxnet
     
     Fill the table of the comparison of two methods
      
-    |Comparison              | MLP | Your Network
-    |Acc(5 epoch)            |
-    |CPU Epoch time          |
-    |GPU Epoch Time(optional)|
+	|Comparison              | MLP | Your Network
+	|Acc(5 epoch)            |
+	|CPU Epoch time          |
+	|GPU Epoch Time(optional)|
     
   
