@@ -1,2 +1,5 @@
-# ignore .idea files,
-.idea/*
+!*README.md
+.idea
+*~
+*.DS_store
+*.pyc
