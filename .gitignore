@@ -1,0 +1,10 @@
+.idea
+*.iml
+out
+gen
+.gitignore
+.idea/DS502-AI-Engineer.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
