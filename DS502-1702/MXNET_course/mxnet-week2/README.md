@@ -36,17 +36,17 @@
         2) Enable public ip address
         3) select one of them 
             g2.2xlarge g2.8xlarge p2.xlarge p2.2xlarge p2.8large p2.16xlarge
-        4) Security Group -> default 22, need 8888 6006 in future 
-        5) For storage, 100G is necssaray 
+        4) Security Group -> default 22, (optional) 8888 6006 port
+        5) For storage, 50~100G is sufficient
         6) Create and download key-pair, such as "*.pem"
-        7) run "ssh -i ~*.epm ec2-user@publicip"
-        8) when in the instance, run "nvidia-smi" and "nvcc --version" to check the availbility of GPU
+        7) run "ssh -i *.epm ec2-user@publicip"
+        8) When in the instance, run "nvidia-smi" and "nvcc --version" to check the availbility of GPU
         
 ### IMPORTANT NOTICE 
     !!! STOP THE INSTSNCE ONCE YOU DON'T NEED IT
     !!! TERMINATE THE INSTANCE WHEN YOU FINSHED THE PROJECT 
     !!! UNLINK THE CREDIT CARD INFO FROM AWS ONCE YOU DON'T USE AWS
-    !!! IT COST MONEY FOR EVERY SECOND YOU USE THE INSTANCES
+    !!! IT COSTS MONEY FOR EVERY SECOND YOU USE THE INSTANCES
 
 ### Useful info
 
