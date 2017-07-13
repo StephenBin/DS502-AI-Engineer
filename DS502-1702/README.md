@@ -2,6 +2,7 @@
 DS502 人工智能直通车课程--第二期课程文件。
 
 ## 包含文件目录：
-1. Caffe_Installation_Script: Caffe安装脚本，请参考README.md。
-2. homework: 每一周作业Solutions。
-3. WeekX_Codelab2: 每一周Codelab作业
+1. Caffe_Installation_Script: Caffe安装脚本，请参考相应[README](Caffe_Installation/README.md)。
+2. MXNET_course: MXNET 课程文档，请参考[README](MXNET_course/README.md)。
+3. Jason_course: Jason 老师课程文档，请参考[README](Jason_course/README.md)。
+2. homework: 每一周作业Solutions，新发作业内容请参考[README](homework/README.md)。
