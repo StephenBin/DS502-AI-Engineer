@@ -66,6 +66,9 @@
 
 ### Deploy the model to your architecture/business 
     
-   
+
+# HW
+    1. Create you small own dataset, Hint: im2rec.py 
+    2. Build Train/Fine tune the small dataset you create. 
    
    
