@@ -49,7 +49,7 @@
     Drop out rate
     Early stopping rules  
 
-## Step 5: Overfit small dataset, that is to say 100% precision and recall over a very small dataset
+## Step 5: Overfit small dataset, 100% precision and recall over a very small dataset
 
     To validate the capability & correctness, it is necessary to do a sanity check before full-scale training. 
     If you can not overfit a verys small dataset, go back and check every step before. 
@@ -65,10 +65,6 @@
     3. Test on Testing dataset and wild testing dataset
 
 ### Deploy the model to your architecture/business 
-    
 
-# HW
-    1. Create you small own dataset, Hint: im2rec.py 
-    2. Build Train/Fine tune the small dataset you create. 
-   
+Try to read im2rec.py for your own dataset.
    
