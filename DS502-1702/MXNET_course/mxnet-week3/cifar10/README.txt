@@ -1,1 +1,0 @@
-This example is an extension of image classification of mxnet github.
