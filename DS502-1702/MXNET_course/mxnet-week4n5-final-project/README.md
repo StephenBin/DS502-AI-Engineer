@@ -90,4 +90,4 @@
     Hardware Requirment:
         GPU machine with >6 GB memory (Dont have GPU? Review mxnet-week2)
         
-                   
+### To start the project, download the data/model/pretrained files from google drive. Unzip them in corresponding folder.                   

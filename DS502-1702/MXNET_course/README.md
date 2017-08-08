@@ -69,4 +69,4 @@ Finish all the "???" and TODO in the ipynb file. Run the jpynb file succefully a
 
 ## Week4-5 Final Project: Cat Detection by Yolo v1
 
-Details is in mxnet-week4&5 folder README.md
+Details are in mxnet-week4&5 folder README.md
