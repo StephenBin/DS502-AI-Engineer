@@ -6,3 +6,7 @@
 *.params
 *.rec
 *.json
+*.zip
+*.tar.gz
+*.jpg
+*.npy

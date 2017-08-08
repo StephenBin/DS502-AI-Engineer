@@ -65,3 +65,8 @@ run "sh download_data.sh" to download the cifar 10 rec file.
 Finish all the "???" and TODO in the ipynb file. Run the jpynb file succefully and post the link to issue. 
 
 (Optional) Fully train cifar10 (if you have GPU) to be converged. Try different network (vgg, resnet, ...) and other hyperparameters (random search)
+
+
+## Week4-5 Final Project: Cat Detection by Yolo v1
+
+Details is in mxnet-week4&5 folder README.md
