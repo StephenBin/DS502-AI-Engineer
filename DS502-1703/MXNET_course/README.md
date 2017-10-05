@@ -1,5 +1,5 @@
 # MXNET_course
-## Week1
+## Week1 Part 1
 ### Goal 
 1) Understand the basics of MXNet 
     1) Understand the basics of NDarray module
@@ -13,7 +13,7 @@
 1) Create github account
 2) Create a repo, try to pull and push code
 3) Play the code of mxnet under mxnet-week1
-## Week2 
+## Week1 Part 2 
 ### Goal
 1) Work with Pycharm for mxnet project 
 2) Able to use github under ubuntu/linux environment
@@ -46,27 +46,3 @@ Design/train a MLP in mxnet
 	
 	|GPU Epoch Time(optional)|
     
-## Week3 
-### Goal: be ready to do a deep learning project
-
-	1. Understand mxnet data io, get/convert/ data
-	2. Build network either from scratch or from others' work
-	3. Sanity check by predict a random image before training.
-	4. Overfit a very small dataset
-	5. Full-scale training 
-	6. Testing 
-
-### HW 
-
-Homework is "https://github.com/BitTiger-MP/DS502-AI-Engineer/blob/master/DS502-1702/MXNET_course/mxnet-week3/HW3/Homework3.ipynb"
-
-run "sh download_data.sh" to download the cifar 10 rec file. 
-
-Finish all the "???" and TODO in the ipynb file. Run the jpynb file succefully and post the link to issue. 
-
-(Optional) Fully train cifar10 (if you have GPU) to be converged. Try different network (vgg, resnet, ...) and other hyperparameters (random search)
-
-
-## Week4-5 Final Project: Cat Detection by Yolo v1
-
-Details are in mxnet-week4&5 folder README.md
