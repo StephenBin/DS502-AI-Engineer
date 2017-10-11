@@ -2,7 +2,7 @@ import os
 import argparse
 import logging
 logging.basicConfig(level=logging.DEBUG)
-from common import find_mxnet, data, fit
+from common import data
 from common.util import download_file
 import mxnet as mx
 MODE = 1
@@ -30,17 +30,17 @@ def download_cifar10():
     download_file('http://data.mxnet.io/data/cifar10/cifar10_train.rec', fnames[0])
     return fnames
 
-#def norm_stat(d):
-#    return mx.nd.norm(d)/np.sqrt(d.size)
-#mon = mx.mon.Monitor(100, norm_stat)
+def norm_stat(d):
+   return mx.nd.norm(d)/np.sqrt(d.size)
+mon = mx.mon.Monitor(100, norm_stat)
 
 if __name__ == '__main__':
     # download data
     (train_fname, val_fname) = download_cifar10()
 
     # parse args
-    parser = argparse.ArgumentParser(description="train cifar10",                                   formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    fit.add_fit_args(parser)
+    parser = argparse.ArgumentParser(description="train cifar10",
+                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     data.add_data_args(parser)
     data.add_data_aug_args(parser)
     data.set_data_aug_level(parser, 2)
