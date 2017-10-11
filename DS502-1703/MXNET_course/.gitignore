@@ -1,3 +1,4 @@
 *.pyc
 .idea/
 *.gz
+.ipynb_checkpoints/
