@@ -1,4 +1,4 @@
-# MXNET week3 - how to do a deep learning project 
+# MXNET week2 - how to do a deep learning project 
 
 ## Step 1: Know your goal 
 
