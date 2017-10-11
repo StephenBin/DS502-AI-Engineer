@@ -45,4 +45,5 @@ Design/train a MLP in mxnet
 	|CPU Epoch time          |
 	
 	|GPU Epoch Time(optional)|
-    
+
+Hello World :)     

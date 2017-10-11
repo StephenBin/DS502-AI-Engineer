@@ -39,9 +39,9 @@
         4) Security Group -> default 22, (optional) 8888 6006 port
         5) For storage, 50~100G is sufficient
         6) Create and download key-pair, such as "*.pem"
-        7) run "ssh -i *.epm ec2-user@publicip"
+        7) run "ssh -i *.pem ec2-user@publicip"
         8) When in the instance, run "nvidia-smi" and "nvcc --version" to check the availbility of GPU
-        
+   4) Setup jupyter notebook https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html        
 ### IMPORTANT NOTICE 
     !!! STOP THE INSTSNCE ONCE YOU DON'T NEED IT
     !!! TERMINATE THE INSTANCE WHEN YOU FINSHED THE PROJECT 
