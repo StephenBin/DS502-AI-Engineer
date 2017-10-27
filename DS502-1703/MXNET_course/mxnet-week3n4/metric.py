@@ -70,8 +70,8 @@ class LossMetric(mx.metric.EvalMetric):
         self.num_inst += 1
         self.sum_loss = np.mean(preds[0].asnumpy())
 
-        label = labels[0].asnumpy().reshape((-1, 49, 7))
-        pred = ((preds[1] + 1) / 2).asnumpy().reshape((-1, 49, 7))
+        label = labels[0].asnumpy().reshape((-1, 49, 5))
+        pred = ((preds[0] + 1) / 2).asnumpy().reshape((-1, 49, 5))
 
         c_label = label[:, :, 0]
         c_pred = pred[:, :, 0]
